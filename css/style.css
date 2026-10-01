@@ -1,1 +1,129 @@
+/* Removes the browser's default spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+
+/* Basic page styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+
+/* Mobile-first navigation layout */
+.navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: pink;
+}
+
+
+/* Styles the name/logo */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+
+/* Navigation links are displayed in a row */
+.nav-links {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+}
+
+
+/* Styles the navigation links */
+.nav-links a {
+    text-decoration: none;
+    color: blue;
+}
+
+
+/* Main page container */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+/* Bio section at the top of the page */
+.bio-hero {
+    padding: 20px;
+    margin-bottom: 24px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+
+/* Mobile-first card layout */
+.card-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+
+/* Individual project cards */
+.card {
+    flex-basis: 100%;
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Adds an interactive effect when hovering over a card */
+.card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Footer styling */
+footer {
+    margin-top: 24px;
+    padding: 20px;
+    text-align: center;
+    background-color: pink;
+    color: blue;
+}
+
+
+/* Desktop layout for screens 768px and larger */
+@media (min-width: 768px) {
+
+    /* Changes the navigation from vertical to horizontal */
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+
+    /* Removes extra logo spacing on desktop */
+    .logo {
+        margin-bottom: 0;
+    }
+
+
+    /* Displays all three cards side-by-side */
+    .card-grid {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+
+    /* Each card takes up 30% of the row */
+    .card {
+        flex-basis: 30%;
+    }
+
+}
